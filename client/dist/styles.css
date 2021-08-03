@@ -1,0 +1,72 @@
+body {
+  padding: 3rem;
+  margin: 0;
+  font-family: 'Noto Sans', 'Public Sans', sans-serif;
+  background-color: rgb(221, 221, 221);
+}
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.navigation-tabs {
+  font-weight: 700;
+  display: flex;
+  padding: 0;
+}
+.tab {
+  padding: 20px 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background-color: black;
+  font-size: 10px;
+  font-weight:700;
+  height: 30px;
+}
+.language {
+  display: flex;
+}
+.search-container {
+  padding-right: 20px;
+}
+.search {
+  margin-top: 20px;
+}
+#flag {
+  background: url('./images/flag.PNG');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 1px;
+  width: 1px;
+  display: block;
+  padding: 10px 10px;
+  margin: 6px 10px;
+}
+#logo {
+  background: url('./images/logo.PNG');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 130px;
+  display: block;
+  padding: 10px 10px;
+  margin: 0;
+}
+.header-icons {
+  margin: 0;
+  padding: 0;
+}
+.material-icons {
+  font-size: 22px;
+
+  padding: 3px 7px 0px;
+}
+.cart {
+  padding: 3px 12px 5px;
+  background-color: rgb(204, 0, 0);
+}

@@ -1,0 +1,31 @@
+{
+  "name": "shift7_navbar",
+  "version": "1.0.0",
+  "description": "FED Prospect Exercise",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack -w",
+    "start": "nodemon server"
+  },
+  "author": "Katie Ladd",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-beta.4",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "nodemon": "^2.0.12",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
