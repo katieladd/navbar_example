@@ -4,11 +4,14 @@ import Nav from './Header/Navbar.jsx';
 import { Navbar, Container } from 'react-bootstrap';
 const App = () => {
   return (
-    <div className='navigation'>
-      <Header />
-      <Nav />
-
-    </div>
+    <>
+      <div className='page'>
+      <div className='navigation'>
+          <Header />
+          <Nav />
+        </div>
+      </div>
+    </>
   )
 }
 

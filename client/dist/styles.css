@@ -1,13 +1,22 @@
 body {
-  padding: 3rem;
+  padding: 0px 240px;
   margin: 0;
   font-family: 'Noto Sans', 'Public Sans', sans-serif;
   background-color: rgb(221, 221, 221);
+}
+ul {
+  list-style-type: none;
+}
+.page {
+  height: 2000px;
+  background-color: rgb(74, 74, 74);
 }
 .navigation-container {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
+  height: 70px;
+  box-shadow: 0px 2px 3px grey;
 }
 .navigation-tabs {
   font-weight: 700;
@@ -16,6 +25,22 @@ body {
 }
 .tab {
   padding: 20px 20px;
+  font-weight: 700;
+}
+.current-tab {
+  border-bottom: 3px solid rgb(204, 0, 0);
+}
+.tab:hover {
+  color:rgb(204, 0, 0);
+  transition: all 0.1s;
+  border-bottom: 3px solid rgb(204, 0, 0);
+}
+/* .tab:active {
+  transform: translateY(-2px);
+} */
+
+.solutions-tab {
+  padding-left: 30px;
 }
 .header {
   display: flex;
@@ -24,16 +49,22 @@ body {
   background-color: black;
   font-size: 10px;
   font-weight:700;
-  height: 30px;
+  height: 33px;
 }
 .language {
   display: flex;
+  font-size: 12px;
+}
+.lang {
+  margin: 0;
+  padding-top: 7px;
 }
 .search-container {
   padding-right: 20px;
 }
 .search {
-  margin-top: 20px;
+  margin-top: 15px;
+  font-size: 15px;
 }
 #flag {
   background: url('./images/flag.PNG');
@@ -46,15 +77,16 @@ body {
   padding: 10px 10px;
   margin: 6px 10px;
 }
+
 #logo {
   background: url('./images/logo.PNG');
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 80px;
+  height: 70px;
   width: 130px;
   display: block;
-  padding: 10px 10px;
+  padding: 10px 20px;
   margin: 0;
 }
 .header-icons {
@@ -67,6 +99,7 @@ body {
   padding: 3px 7px 0px;
 }
 .cart {
-  padding: 3px 12px 5px;
+  padding: 6px 12px 5px;
   background-color: rgb(204, 0, 0);
 }
+
