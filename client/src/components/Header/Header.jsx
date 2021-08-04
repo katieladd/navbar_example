@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="language">
+    <header className='header'>
+      <div className='language'>
         <div id="flag"></div>
         <p className='lang'>EN</p>
       </div>

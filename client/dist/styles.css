@@ -13,6 +13,8 @@ ul {
 }
 .navigation-container {
   display: flex;
+  z-index: 2;
+  position: relative;
   justify-content: space-between;
   background-color: #fff;
   height: 70px;
@@ -35,15 +37,14 @@ ul {
   transition: all 0.1s;
   border-bottom: 3px solid rgb(204, 0, 0);
 }
-/* .tab:active {
-  transform: translateY(-2px);
-} */
 
 .solutions-tab {
   padding-left: 30px;
 }
 .header {
   display: flex;
+  z-index: 2;
+  position: relative;
   justify-content: space-between;
   color: #fff;
   background-color: black;
@@ -102,4 +103,22 @@ ul {
   padding: 6px 12px 5px;
   background-color: rgb(204, 0, 0);
 }
-
+.dropdown-options-container {
+  z-index: 0;
+  position: relative;
+  background-color: #fff;
+  height: 50vh;
+  font-weight: 700;
+  animation: dropdown .2s;
+}
+.dropdown-option {
+  padding: 15px 20px;
+}
+@keyframes dropdown {
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
