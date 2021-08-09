@@ -1,5 +1,5 @@
 import React from 'react';
-
+const cartItems = 3;
 const Header = () => {
   return (
     <header className='header'>
@@ -12,10 +12,10 @@ const Header = () => {
       <li className='material-icons help'>help</li>
       <li className='material-icons location'>location_on</li>
       <li className='material-icons person'>person</li>
-        <li className='material-icons cart'>shopping_cart</li>
-        <li>3</li>
-
+      <li className='material-icons cart'>shopping_cart</li>
+      <li className='cart-items'>{cartItems}</li>
       </ul>
+
     </header>
   )
 }
