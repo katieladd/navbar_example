@@ -5,56 +5,75 @@ const Nav = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState('');
 
+  const clickMenu = () => {
+    toggle === 'ham-toggle' ? setToggle('') : setToggle('ham-toggle')
+  }
+
+  const activeItem = (val) => {
+    active === val ? setActive('') : setActive(val)
+  }
+
   return (
     <>
       <nav className='navigation-container'>
-        <li className='material-icons ham-icon'
-          onClick={() => { toggle === 'ham-toggle' ? setToggle('') : setToggle('ham-toggle') }}>
+        {!toggle && <i className='material-icons ham-icon'
+          onClick={() => { clickMenu() }}>
           menu
-        </li>
+        </i>}
         <ul className={`navigation-tabs`}>
-          <li id='logo'></li>
+          {!toggle && <li id='logo'></li> }
+
           <li className={`${toggle} menu-header`}>
             <p className='menu'>Menu</p>
-            <span class='material-icons'>
+            <span className='material-icons'
+            onClick={() => { clickMenu() }}>
               close
             </span>
           </li>
-          <li className={`${toggle} tab solutions-tab  ${active === 'solutions' ? 'current-tab' : ''}`}
-            onClick={() => { active === 'solutions' ? setActive('') : setActive('solutions') }}>
-            SOLUTIONS
-            <span class='material-icons chevron'>
+          <li value='solutions'
+            className={`${toggle} tab solutions-tab  ${active === 'solutions' ? 'current-tab' : ''}`}
+            onClick={() => { activeItem('solutions') }}>
+              SOLUTIONS
+            <span className='material-icons chevron'>
               chevron_right
             </span>
           </li>
-          <li className={`${toggle} tab products-tab  ${active === 'products' ? 'current-tab' : ''}`}
-            onClick={() => { active === 'products' ? setActive('') : setActive('products') }}>
+          <li value='products'
+            className={`${toggle} tab products-tab  ${active === 'products' ? 'current-tab' : ''}`}
+            onClick={() => { activeItem('products')  }}>
             PRODUCTS
-            <span class='material-icons chevron'>
+            <span className='material-icons chevron'>
               chevron_right
             </span>
           </li>
-          <li className={`${toggle} tab resources-tab  ${active === 'resources' ? 'current-tab' : ''}`}
-            onClick={() => { active === 'resources' ? setActive('') : setActive('resources') }}>
+          <li value='resources'
+            className={`${toggle} tab resources-tab  ${active === 'resources' ? 'current-tab' : ''}`}
+            onClick={() => { activeItem('resources')  }}>
             RESOURCES
-            <span class='material-icons chevron'>
+            <span className='material-icons chevron'>
               chevron_right
             </span>
           </li>
-          <li className={`${toggle} tab education-tab  ${active === 'education' ? 'current-tab' : ''}`}
-            onClick={() => { active === 'education' ? setActive('') : setActive('education') }}>
+          <li value='education'
+            className={`${toggle} tab education-tab  ${active === 'education' ? 'current-tab' : ''}`}
+            onClick={() => { activeItem('education')  }}>
             EDUCATION
-            <span class='material-icons chevron'>
+            <span className='material-icons chevron'>
               chevron_right
             </span>
           </li>
-          <li className={`${toggle} tab automation-tab  ${active === 'automation' ? 'current-tab' : ''}`}
-            onClick={() => { active === 'automation' ? setActive('') : setActive('automation') }}>
+          <li value='automation'
+            className={`${toggle} tab automation-tab  ${active === 'automation' ? 'current-tab' : ''}`}
+            onClick={() => { activeItem('automation')  }}>
             AUTOMATION
-            <span class='material-icons chevron'>
+            <span className='material-icons chevron'>
               chevron_right
             </span>
           </li>
+          <li className='menu-footer'></li>
+          <li className='menu-footer'></li>
+          <li className='menu-footer'></li>
+          <li className='menu-footer'></li>
         </ul>
         <div className='search-container'>
           <span className='search'>Search</span>
@@ -117,7 +136,7 @@ const Nav = () => {
         {active === 'automation' &&
           <ul className='dropdown-options-container'>
             <li className='dropdown-option automation-li1'>
-              <a href='https://github.com/katieladd'>Just automate hiring me, I swear I'm cool 😎</a>
+              <a href='https://github.com/katieladd'>Automate hiring Katie 😎</a>
             </li>
           </ul>
         }

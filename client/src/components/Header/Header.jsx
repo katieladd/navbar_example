@@ -8,12 +8,25 @@ const Header = () => {
         <p className='lang'>EN</p>
       </div>
       <ul className='header-icons'>
-      <li className='material-icons verified'>verified_user</li>
-      <li className='material-icons help'>help</li>
-      <li className='material-icons location'>location_on</li>
-      <li className='material-icons person'>person</li>
-      <li className='material-icons cart'>shopping_cart</li>
-      <li className='cart-items'>{cartItems}</li>
+        <li>
+          <i className='material-icons verified'>verified_user</i>
+          <div className='menu-footer'>Safety</div>
+        </li>
+        <li>
+          <i className='material-icons help'>help</i>
+          <div className='menu-footer'>Help</div>
+        </li>
+        <li>
+          <i className='material-icons location'>location_on</i>
+          <div className='menu-footer'>Where to Buy/Rent</div>
+        </li>
+        <li>
+          <i className='material-icons person'>person</i>
+        </li>
+        <li>
+        < i className='material-icons cart'>shopping_cart</i>
+        <div className='cart-items'>{cartItems}</div>
+        </li>
       </ul>
 
     </header>
